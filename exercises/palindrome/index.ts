@@ -15,6 +15,9 @@ function palindrome(str: string): boolean {
   return bool;
 }
 
-const output = palindrome("gg");
+const palindrome_2 = (str: string): boolean => {
+  return str.split("").every((char) => char === str[str.length - 1]);
+};
+const output = palindrome_2("gg");
 
 console.log("palindrome: ", output);
