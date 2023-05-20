@@ -6,6 +6,8 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+//! solve 1
+
 function reverse(str: string): string {
   let newStr = "";
   let strLength = str.length;
@@ -18,5 +20,15 @@ function reverse(str: string): string {
 
   return newStr;
 }
+// ! solve 2
+function reverse2(str: string) {
+  return str.split("").reverse().join("");
+}
+// !solve 3
 
-reverse("hello world !");
+function reverse3(str: string): string {
+  return str.split("").reduce((reversed, char) => char + reversed, "");
+}
+
+let output = reverse3("hello world !");
+console.log(output);
